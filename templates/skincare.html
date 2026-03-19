@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Veloura - Skin Care{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/shop.css' %}">
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="shop-page">
+
+    <div class="shop-container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="{% url 'home' %}">Home</a>
+            <span>/</span>
+            <span>Skin Care</span>
+        </div>
+
+        <!-- Page Title -->
+        <h1 class="shop-title">Skin Care</h1>
+
+        <!-- Results + Sorting -->
+        <div class="shop-toolbar">
+
+            <p class="results-count">
+                Showing 1–8 of 20 results
+            </p>
+
+            <div class="sorting">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option>Sort by popularity</option>
+                    <option>Sort by latest</option>
+                    <option>Sort by price: low to high</option>
+                    <option>Sort by price: high to low</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- Products -->
+        <div class="products-grid">
+            <!-- Loop to generate 8 placeholder products -->
+            {% for product in products %}
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="sale-badge">Sale</span>
+                    <img src="{{ product.image }}" alt="Skincare Product {{ product.name }}">
+                </div>
+
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">
+                        <span class="old-price">${{ product.old_price }}</span>
+                        <span class="new-price">${{ product.price }}</span>
+                    </p>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" class="page">← Prev</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+            {% if num == page_obj.number %}
+            <span class="page active">{{ num }}</span>
+            {% elif num >= page_obj.number|add:"-2" and num <= page_obj.number|add:"2" %} <a href="?page={{ num }}"
+                class="page">{{ num }}</a>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="page">Next →</a>
+                {% endif %}
+        </div>
+
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Veloura — Temporary Pause
+{% endblock %}
+
+{% block css %}
+<style>
+
+body{
+    margin:0;
+    font-family:'Roboto',sans-serif;
+    background:#fdf6f8;
+    color:#333;
+}
+
+.maintenance-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:90vh;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    max-width:700px;
+}
+
+.logo{
+    font-family:'Marcellus',serif;
+    font-size:32px;
+    margin-bottom:20px;
+    color:#d63384;
+}
+
+.title{
+    font-family:'Marcellus',serif;
+    font-size:48px;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.subtitle{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:35px;
+    color:#555;
+}
+
+.highlight{
+    color:#d63384;
+    font-weight:500;
+}
+
+.button{
+    display:inline-block;
+    padding:14px 32px;
+    background:#d63384;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#b8286f;
+    transform:translateY(-2px);
+}
+
+.small-note{
+    margin-top:30px;
+    font-size:14px;
+    color:#888;
+}
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="maintenance-wrapper">
+
+    <div class="container">
+
+        <div class="logo">Veloura</div>
+
+        <h1 class="title">
+            Our Store Is Experiencing<br>
+            An Incredible Rush
+        </h1>
+
+        <p class="subtitle">
+            Thanks to the overwhelming love from our customers,
+            we're currently <span class="highlight">upgrading our shopping experience</span>
+            to handle the surge in demand.
+        </p>
+
+        <p class="subtitle">
+            Orders have been flowing in faster than expected, so we're
+            taking a short moment to optimize the store and ensure
+            every customer gets the premium experience Veloura promises.
+        </p>
+
+        <a href="/" class="button">
+            Explore Our Collections
+        </a>
+
+        <p class="small-note">
+            We'll be back very shortly. Thank you for your patience and support.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

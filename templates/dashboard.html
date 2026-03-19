@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="{% static 'styles/dashboard.css' %}">
+
+    <title>Veloura Analytics</title>
+
+</head>
+
+
+<body>
+
+
+    <header class="dashboard-header">
+        <h1>Veloura Business Dashboard</h1>
+        <p>Business Performance Overview</p>
+    </header>
+
+
+
+    <!-- METRICS -->
+    <section class="metrics">
+
+    <div class="metric-card">
+        <h3 id="totalRevenue">$0</h3>
+        <p>Total Revenue</p>
+    </div>
+
+    <div class="metric-card">
+        <h3 id="totalOrders">0</h3>
+        <p>Total Orders</p>
+    </div>
+
+    <div class="metric-card">
+        <h3 id="totalCustomers">0</h3>
+        <p>Total Customers</p>
+    </div>
+
+    <div class="metric-card">
+        <h3 id="conversionRate">0%</h3>
+        <p>Conversion Rate</p>
+    </div>
+
+    <div class="metric-card">
+        <h3 id="businessAge">0 Months</h3>
+        <p>Business Age</p>
+    </div>
+
+    <div class="metric-card">
+        <h3 id="avgOrderValue">$0</h3>
+        <p>Avg Order Value</p>
+    </div>
+
+</section>
+
+
+
+    <!-- INVESTMENT SECTION -->
+    <section class="investment-section">
+
+        <div class="investment-card">
+
+            <h2>Business Investment Overview</h2>
+
+            <div class="investment-stats">
+
+                <div>
+                    <h3>${{ initial_investment }}</h3>
+                    <p>Initial Investment</p>
+                </div>
+
+                <div>
+                    <h3>${{ total_revenue }}</h3>
+                    <p>Total Revenue</p>
+                </div>
+
+                <div>
+                    <h3>${{ profit }}</h3>
+                    <p>Profit</p>
+                </div>
+
+                <div>
+                    <h3>{{ roi }}%</h3>
+                    <p>Return on Investment</p>
+                </div>
+
+            </div>
+
+            <canvas id="roiChart"></canvas>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CHARTS GRID -->
+    <section class="charts-grid">
+
+        <div class="chart-card">
+            <h2>Monthly Revenue</h2>
+            <canvas id="revenueChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h2>Sales Distribution</h2>
+            <canvas id="salesPie"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h2>Orders per Month</h2>
+            <canvas id="ordersChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h2>Top Product Categories</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+
+    </section>
+
+
+
+    <script src="{% static 'scripts/dashboard.js' %}"></script>
+
+</body>
+
+</html>

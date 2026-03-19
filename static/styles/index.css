@@ -1,0 +1,418 @@
+.section {
+  background: #fffafc;
+  padding: 100px 0;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("https://websitedemos.net/be-bold-beauty-store-04/wp-content/uploads/sites/1117/2022/08/hero.jpg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* Small text */
+.hero-small-text {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #e88aa0;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Main hero text */
+.hero-title {
+  font-family: "Marcellus", serif;
+  font-size: 64px;
+  color: #2b2b2b;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* Caption */
+.hero-caption {
+  max-width: 420px;
+  font-size: 16px;
+  color: #555;
+  color: white;
+  margin-bottom: 35px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #f7a6b8;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #e88aa0;
+}
+
+/******************************************************** Products section */
+.products-section {
+  background: #fffafc;
+  padding: 100px 0;
+}
+
+.products-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* section titles */
+.products-small {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #e88aa0;
+  margin-bottom: 10px;
+}
+
+.products-title {
+  font-family: "Marcellus", serif;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #2b2b2b;
+}
+
+/* grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* product card */
+.product-card {
+  text-align: left;
+}
+
+/* image container */
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  display: block;
+}
+
+/* sale badge */
+.sale-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: white;
+  padding: 6px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 50px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* product info */
+.product-info {
+  margin-top: 14px;
+}
+
+.product-info h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* price */
+.price {
+  font-size: 14px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.new-price {
+  color: #e88aa0;
+  font-weight: 500;
+}
+
+/*********************************************** PROMO SECTION */
+.promo-section {
+  height: 90vh;
+  background-image: url("https://websitedemos.net/be-bold-beauty-store-04/wp-content/uploads/sites/1117/2022/08/bg-03.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* This creates the static background effect */
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.promo-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* small text */
+.promo-small {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #e88aa0;
+  margin-bottom: 15px;
+}
+
+/* title */
+.promo-title {
+  font-family: "Marcellus", serif;
+  font-size: 56px;
+  color: #2b2b2b;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* caption */
+.promo-caption {
+  max-width: 420px;
+  font-family: "Roboto", sans-serif;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* button */
+.promo-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: #f7a6b8;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.promo-btn:hover {
+  background: #e88aa0;
+  color: white;
+}
+
+/************************** REVIEWS SECTION********************/
+.reviews-section {
+  background: #fffafc;
+  padding: 120px 0;
+}
+
+.reviews-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* headings */
+.reviews-small {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #e88aa0;
+  margin-bottom: 10px;
+}
+
+.reviews-title {
+  font-family: "Marcellus", serif;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #2b2b2b;
+}
+
+/* grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* card */
+.review-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+/* stars */
+.stars {
+  color: #f7a6b8;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+/* review text */
+.review-text {
+  font-family: "Roboto", sans-serif;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+/* name */
+.review-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+/******************************************* WHY CHOOSE US */
+.why-choose-section {
+  background: #fffafc;
+  padding: 120px 0;
+}
+
+.why-choose-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* section headers */
+.why-small {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #e88aa0;
+  margin-bottom: 10px;
+}
+
+.why-title {
+  font-family: "Marcellus", serif;
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #2b2b2b;
+}
+
+/* grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* card */
+.why-card {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.why-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.why-card h3 {
+  font-family: "Marcellus", serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #2b2b2b;
+}
+
+.why-card p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    padding: 80px 0;
+    background-position: center;
+  }
+  .hero-container {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .hero-caption {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .promo-section {
+    height: auto;
+    padding: 100px 0;
+    background-position: center;
+  }
+  .promo-container {
+    text-align: center;
+  }
+  .promo-title {
+    font-size: 40px;
+  }
+  .promo-caption {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=index.css.map */

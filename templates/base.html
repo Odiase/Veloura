@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Marcellus&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <!-- Page specific CSS -->
+    {% block css %}{% endblock %}
+    <title>{% block title %}Veloura{% endblock %}</title>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                <span><img src="{% static 'assets/veloura_logo.svg' %}" width="50"></span>
+                <a href="{% url 'home' %}">Veloura</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="{% url 'shop' %}">Shop All</a></li>
+                <li><a href="{% url 'makeup' %}">Make Up</a></li>
+                <li><a href="{% url 'skincare' %}">Skin Care</a></li>
+                <li><a href="{% url 'haircare' %}">Hair Care</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+
+                <div class="cart">
+                    <a href="{% url 'maintainance' %}">
+                        <img src="{% static 'assets/icons/cart.svg' %}">
+                    </a>
+                </div>
+
+                <div class="menu-toggle">☰</div>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- PAGE CONTENT -->
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <div class="newsletter-container">
+                <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+                <p class="newsletter-text">Get updates on new products, exclusive offers, and beauty tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-links">
+            <div class="links-container">
+
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="{% url 'shop' %}">Shop All</a></li>
+                        <li><a href="{% url 'makeup' %}">Makeup</a></li>
+                        <li><a href="{% url 'skincare' %}">Skin Care</a></li>
+                        <li><a href="{% url 'haircare' %}">Hair Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>Copyright © 2026 Veloura | Powered by Veloura</p>
+        </div>
+
+    </footer>
+
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    padding: 40px;
+    color: #111;
+}
+
+/* HEADER */
+
+.dashboard-header {
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #666;
+}
+
+/* METRICS */
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.metric-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.metric-card h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+/* CHART GRID */
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.chart-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.chart-card h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+/* INVESTMENT SECTION */
+
+.investment-section {
+    margin-bottom: 40px;
+}
+
+.investment-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.investment-card h2 {
+    margin-bottom: 25px;
+}
+
+.investment-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.investment-stats h3 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 24px;
+    }
+
+}

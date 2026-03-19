@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Veloura - Be Bold
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-container">
+
+        <p class="hero-small-text">NEW COLLECTION</p>
+
+        <h1 class="hero-title">
+            Be Bold.<br>
+            Be Beautiful.
+        </h1>
+
+        <p class="hero-caption">
+            Discover premium cosmetics, skincare and fragrances
+            designed to elevate your beauty experience.
+        </p>
+
+        <a href="#" class="hero-btn">Shop Now</a>
+
+    </div>
+
+</section>
+
+
+<!-- Popular products section -->
+<section class="products-section">
+
+    <div class="products-container">
+
+        <p class="products-small">POPULAR PRODUCTS</p>
+        <h2 class="products-title">Trending Now</h2>
+
+        <div class="products-grid">
+
+            {% for product in trending %}
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="sale-badge">Sale</span>
+                    <img src={{ product.image}}>
+                </div>
+
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">
+                        <span class="old-price">${{ product.old_price|floatformat:2 }}</span>
+                        <span class="new-price">${{ product.price|floatformat:2 }}</span>
+                    </p>
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Best Selling -->
+<section class="products-section best-selling">
+
+    <div class="products-container">
+
+        <p class="products-small">SHOP</p>
+        <h2 class="products-title">Best Selling</h2>
+
+        <div class="products-grid">
+            <!-- Product Cards (same as your original) -->
+
+            {% for product in best_selling %}
+
+            <!-- Product 4 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <span class="sale-badge">Sale</span>
+                    <img src={{ product.image }}>
+                </div>
+
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">
+                        <span class="old-price">${{ product.old_price|floatformat:2 }}</span>
+                        <span class="new-price">${{ product.price|floatformat:2 }}</span>
+                    </p>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Promo Section -->
+<section class="promo-section">
+
+    <div class="promo-container">
+
+        <p class="promo-small">LIMITED COLLECTION</p>
+
+        <h2 class="promo-title">
+            Elevate Your <br> Natural Beauty
+        </h2>
+
+        <p class="promo-caption">
+            Premium skincare and cosmetics crafted to enhance
+            your glow and confidence every day.
+        </p>
+
+        <a href="#" class="promo-btn">Shop Collection</a>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS SECTION -->
+<section class="reviews-section">
+
+    <div class="reviews-container">
+
+        <p class="reviews-small">CUSTOMER LOVE</p>
+        <h2 class="reviews-title">What Our Customers Say</h2>
+
+        <div class="reviews-grid">
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">
+                    I’ve tried so many skincare brands but this one genuinely surprised me.
+                    The face cream feels luxurious and my skin has never looked this
+                    hydrated.
+                </p>
+                <h4 class="review-name">Sophia Martinez</h4>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">
+                    The perfume I ordered smells incredible and lasts all day.
+                    I constantly get compliments when I wear it.
+                </p>
+                <h4 class="review-name">Emily Johnson</h4>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">
+                    Shipping was quick and the makeup quality is amazing.
+                    The foundation blends perfectly and looks natural.
+                </p>
+                <h4 class="review-name">Olivia Carter</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose-section">
+
+    <div class="why-choose-container">
+
+        <p class="why-small">OUR PROMISE</p>
+        <h2 class="why-title">Why Choose Veloura</h2>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="why-icon">🚚</div>
+                <h3>Free & Fast Shipping</h3>
+                <p>Get your beauty essentials delivered quickly.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">🔒</div>
+                <h3>Secure Payment</h3>
+                <p>Your transactions are encrypted and safe.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">✨</div>
+                <h3>Premium Ingredients</h3>
+                <p>Crafted with high-quality ingredients.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon">💖</div>
+                <h3>Customer Satisfaction</h3>
+                <p>Your happiness is our top priority.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
