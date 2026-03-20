@@ -22,6 +22,10 @@ def home(request):
     })
 
 
+
+def products_coming_soon(request):
+    return render(request, "products_coming_soon.html")
+
 def maintainance(request):
     return render(request, "maintainance_page.html")
 

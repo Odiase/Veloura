@@ -1,0 +1,45 @@
+.coming-soon-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.coming-soon-container {
+  max-width: 700px;
+}
+
+.coming-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.coming-subtitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.coming-message {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  opacity: 0.7;
+}
+
+.shop-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  background: #d63384;
+  color: white;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background: #b02a6e;
+}/*# sourceMappingURL=products_coming_soon.css.map */

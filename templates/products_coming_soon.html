@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+[% block title %}
+Veloura - Our Products
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/products_coming_soon.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="coming-soon-section">
+    <div class="coming-soon-container">
+
+        <h1 class="coming-title">Our Products</h1>
+
+        <p class="coming-subtitle">
+            We're preparing something beautiful for you.
+        </p>
+
+        <p class="coming-message">
+            Our full product catalog is currently being curated.
+            Soon you'll be able to explore our premium skincare,
+            makeup, and haircare collections.
+        </p>
+
+        <a href="{% url 'shop' %`}" class="shop-btn">
+            Visit Store
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}
